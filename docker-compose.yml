@@ -1,0 +1,23 @@
+version: '2'
+services:
+  mysql:
+    build: .
+    container_name: mysql
+    ports:
+     - "3307:3306"
+    networks:
+      youre_network:
+        ipv4_address: dockerip
+    volumes:
+     - mysql/:/var/lib/mysql
+    hostname: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+volumes:
+  mysql_tls:
+    driver: local
+    
+networks:
+  youre_network:
+    external: true
+
