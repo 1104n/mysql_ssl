@@ -1,3 +1,4 @@
+Enabling SSL for MySQL
 ## Configuration & CA
 At first start, this image will run `mysql_ssl_rsa_setup` which will build a Certification Authority for TLS transport.
 ## TLS certificates
